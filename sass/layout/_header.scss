@@ -1,0 +1,20 @@
+.header{
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/horizon-photo.JPG); // url(../img/horizon-photo.JPG)
+    background-size: cover;
+    background-position: bottom;
+
+    &__text-box {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        a:last-child {
+            margin-top: 2rem;
+        }
+    }
+}

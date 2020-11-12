@@ -1,0 +1,76 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 15rem 0;
+    @include respond(tab-700) {
+        padding: 10rem 0;   
+    }
+}
+
+.section-articles {
+    background-color: $color-grey-light-2;
+    padding: 15rem 0 ;
+    @include respond(tab-700) {
+        padding: 10rem 0;   
+    }
+}
+
+.section-teaching {
+    background-color: $color-grey-light-1;
+    padding: 15rem 0;
+    @include respond(tab-700) {
+        padding: 10rem 0;   
+    }
+}
+
+.section-thesis {
+    color: $color-black;
+    background-color: $color-grey-light-1;
+    padding: 15rem 0;
+    @include respond(tab-700) {
+        padding: 10rem 0;   
+    }
+
+
+    .thesis--text {
+        /*figure {
+            display: table;
+            float: left;
+          }
+
+        figcaption {
+            display: table-caption;
+            caption-side: top;
+            font-size: 1.5rem;
+            text-align: center;
+          }*/
+        @include respond(tab-700) {
+            text-align: center;
+        }
+
+        img {
+            float: left;
+            height: 30rem;
+            margin: 1rem 3rem 1.5rem 0;
+
+            @include respond(tab-900) {
+                height: 25rem;
+            }
+
+            @include respond(tab-700) {
+                float: none;
+                
+            }
+            
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            @include respond(tab-700) {
+                padding: 0 1rem;   
+            }
+        }
+        
+    }
+}

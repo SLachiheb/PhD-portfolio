@@ -1,0 +1,149 @@
+.container {
+
+    &__about-me {
+        display: flex;
+        flex-direction: row;
+
+        @include respond(tab-700) {
+            flex-direction: column;
+        }
+
+        &--photo {
+            height: 40rem;
+            flex-basis: 30%;
+            border-radius: 3px;
+            box-shadow: 0 2rem 4rem rgba($color-black, .3);
+
+            @include respond(tab-900) {
+                height: 30rem;
+                margin-left: 2rem;
+            }
+            @include respond(tab-700) {
+                margin: 0 auto;
+                margin-bottom: 2.5rem;
+                width: 30rem;
+            }
+        }
+
+        &--description {
+            padding: 4rem;
+            height: 40rem;
+            flex-basis: 70%;
+
+            font-size: 2rem;
+
+            @include respond(tab-900) {
+                font-size: 1.6rem;
+                height: 30rem;
+                padding: 2rem;
+            }
+            
+            span {
+                display: inline-block;
+                margin-bottom: 3rem;
+                text-align: justify;
+                a {
+                    &:link,
+                    &:visited {
+                        color: $color-linear-dark ;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &---contact {
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__topic {
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        text-align: center;
+        font-size: 2rem;    
+        
+        @include respond(tab-900) {
+            font-size: 1.6rem; 
+        }
+
+        @include respond(tab-700) {
+            margin-top: 5rem;
+        }
+
+        @include respond(tab-600) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+
+        & > * {
+            padding: 2rem;
+            display: inline-block;
+            transition: all .2s;
+            
+            i {
+                font-size: 6rem;
+                padding: 2rem;
+            }
+
+            &:hover {
+                transform: translateY(-1.5rem) scale(1.03);
+                box-shadow: 0 3rem 4rem rgba($color-black, .2);
+            }
+        }
+
+        [class$="box"]:nth-child(2n+1) {
+            background-color: $color-primary ;
+            color: $color-white;
+        } 
+        [class$="box"]:nth-child(2n) {
+            background-color: $color-white;
+            i,
+            h3 {
+                @include linear-gradient-clip;
+            } 
+        } 
+
+        :nth-child(1) {
+            border-top-left-radius: .5rem;
+        }
+        :nth-child(3) {
+            border-top-right-radius: .5rem;
+        }
+        :nth-child(4) {
+            border-bottom-left-radius: .5rem;
+        }
+        :nth-child(6) {
+            border-bottom-right-radius: .5rem;
+        }
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        column-gap: 10rem;
+
+        @include respond(tab-900) {
+            column-gap: 1rem;
+        }
+        @include respond(tab-700) {
+            grid-template-columns: .6fr;
+            grid-template-rows: repeat(3, 1fr);
+            column-gap: 0;
+            row-gap: 3rem;
+            justify-content: center;
+        }
+
+        @include respond(tab-600) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            column-gap: 0;
+            row-gap: 3rem;
+            justify-content: center;
+        }
+    }
+}
+

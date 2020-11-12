@@ -1,0 +1,40 @@
+.btn {
+    &:link,
+    &:visited {
+        display: inline-block;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        font-size: $default-font-size;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .2s; 
+
+        @include respond(tab-700) {
+            font-size : 1.3rem;
+            font-weight: 700;
+            color: #fbc531;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background-color: #fbc531;
+        color: white;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark-1;
+    }
+}

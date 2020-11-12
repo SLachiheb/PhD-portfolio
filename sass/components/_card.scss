@@ -1,0 +1,177 @@
+.card {
+    // FONCTIONALITY
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem ;
+    height: 30rem;
+
+    &__side {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30rem;
+        transition: all .8s ease;
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            border: 10px solid;
+            border-image-slice: 1;
+            border-width: 5px;
+            border-image-source: linear-gradient($color-linear-light, $color-linear-dark);
+        }
+
+        &--back {
+            transform: rotateY(180deg) ;
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {  //Si je survole la card je veux faire une transformation de 180deg au coté arrière !
+        transform: rotateY(0deg);
+    }
+
+    // FRONT SIDE STYLING
+    &__heading {
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        color: $color-black;
+
+        @include respond(tab-1000) {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+    
+    }
+
+    &__heading-span {
+        box-decoration-break: clone;
+        -webkit-box-decoration-break : clone;
+        padding: 1rem 1rem;        
+    }
+
+    // BACK SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__box {
+        margin-top: 10rem;
+        margin-bottom: 8rem;
+        color: $color-black;
+    }
+
+    &__poste {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+
+    &__site {
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    &__year {
+        font-size: 4rem;
+        font-weight: 100;
+    }
+
+    @include respond(tab-900) {
+        &__poste {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+    
+        }
+        &__site {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+    
+        &__year {
+            font-size: 2rem;
+            font-weight: 100;
+            padding-top: 1.5rem;
+        }
+    }
+
+
+    
+    @media only screen and (max-width:43.75em),
+    only screen and (hover:none) {
+        // FONCTIONALITY
+        position: relative; 
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        color: $color-white;
+
+        &__heading {
+            color: $color-white;
+        }
+
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            
+            &--front {
+                height: 12rem;
+                background-color: rgba($color-primary, 1);
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%) ;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%) ;
+                border: none;
+                
+            }
+
+            &--back {
+                transform: rotateY(0deg);
+                
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0deg);
+        }
+
+        // BACK SIDE STYLING
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 0 4rem;
+            
+        }
+
+        &__box {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+}

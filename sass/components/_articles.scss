@@ -1,0 +1,105 @@
+.articles {
+    
+    &__title {
+        margin: 5rem 0;
+        font-size: 3rem;
+        color: $color-black;
+        border-bottom: 1px solid $color-black;
+    }
+
+    &__link {    
+        &--link {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                font-size: 1.6rem;
+                color: $color-black;
+            }
+        }
+    }
+
+    &__noLink {
+        font-size: 1.6rem;
+        color: $color-black;
+    }
+
+    &__flex {
+        display: grid;
+        grid-template-columns: .3fr 3fr;
+        grid-template-rows: 1fr;
+        column-gap: 1rem;
+        margin-bottom: 3rem;
+
+        @include respond(tab-600) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 1rem;
+        }
+
+
+        &--item1 {
+            display: block;
+            @include respond(tab-600) {
+                margin: 0 auto;
+            }
+        }
+
+        &--item2 {
+            display: block;
+            padding-left: 2rem;
+            @include respond(tab-700) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+
+
+
+/*
+ @include clearfix;
+    margin-bottom: 2rem;
+    &__shape {
+        float: left;
+        width: 7rem;
+        height: 7rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    
+        background-image: linear-gradient(to right, $color-linear-light, $color-linear-dark);
+
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 2rem;
+        
+
+        @supports (clip-path : polygon(0 0)) or (-webkit-clip-path : polygon(0 0 )) {
+            -webkit-clip-path: circle();
+            clip-path: circle();
+            -webkit-shape-outside : circle();
+             shape-outside: circle();
+             border-radius: none;
+        }
+
+        &--conf {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color : $color-white;
+        }
+
+        &--date {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 70%);
+            color: $color-white;
+            opacity: 0;
+            text-align: center;
+            transition: all .5s;
+        }
+    }
+*/

@@ -1,0 +1,58 @@
+@mixin linear-gradient-clip {
+    background-image: linear-gradient(to right, $color-linear-light, $color-linear-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+// MEDIA QUERY MANAGER
+
+/*
+0 - 600px : phone
+600px - 900px : Tablet portrait
+900px - 1200px : Tablet landscape
+[1200px - 1800px] : is where normal styles apply
+1800 px - + : big desktop
+
+$breakpoint argument choices ;
+    - phone 
+    - tab-port
+    - tab-land
+    - big-desktop
+
+    1em = 16pixel
+
+ORDER : base + typography > general layout + grid > page layout > components
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab-1000 {
+        @media only screen and (max-width:62.5em) { @content }; // 1000px
+    }
+    @if $breakpoint == tab-900 {
+        @media only screen and (max-width:56.25em) { @content }; // 1000px
+    }
+    @if $breakpoint == tab-700 {
+        @media only screen and (max-width:43.75em) { @content }; // 1000px
+    }
+    @if $breakpoint == tab-600 {
+        @media only screen and (max-width:37.5em) { @content }; // 1000px
+    }
+    @if $breakpoint == tab-400 {
+        @media only screen and (max-width:25em) { @content }; // 1000px
+    }
+    @if $breakpoint == tab-320 {
+        @media only screen and (max-width:20em) { @content }; // 1000px
+    }
+}
+
+

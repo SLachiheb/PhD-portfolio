@@ -1,6 +1,7 @@
 
 $(function(){
     /* For the sticky navigation  */
+
     $('.js--section-about').waypoint(
       function(direction) {
           if(direction == 'down') {
@@ -12,7 +13,6 @@ $(function(){
           offset: '7rem'
       }
     );
-
     
     $('.js--wp-1').waypoint(function(direction) {
         $('.js--wp-1').addClass('animate__animated animate__fadeInDownBig');
@@ -75,9 +75,6 @@ $(function(){
             });
           }
         }
-      });
-
-      
-      
+      });   
 });
 

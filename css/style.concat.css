@@ -542,7 +542,7 @@ body {
   transition: all .2s; }
   @media only screen and (max-width: 25em) {
     .heading-secondary {
-      font-size: 2rem; } }
+      font-size: 3rem; } }
   .heading-secondary:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -910,6 +910,9 @@ body {
         margin: 0 auto;
         margin-bottom: 2.5rem;
         width: 30rem; } }
+    @media only screen and (max-width: 25em) {
+      .container__about-me--photo {
+        width: 100%; } }
   .container__about-me--description {
     padding: 4rem;
     height: 40rem;
@@ -1287,6 +1290,10 @@ footer {
       @media only screen and (max-width: 43.75em) {
         .section-thesis .thesis--text img {
           float: none; } }
+      @media only screen and (max-width: 25em) {
+        .section-thesis .thesis--text img {
+          width: 100%;
+          margin: 0; } }
     .section-thesis .thesis--text p {
       text-align: justify;
       margin-bottom: 2rem;

@@ -23,6 +23,10 @@
                 margin-bottom: 2.5rem;
                 width: 30rem;
             }
+            @include respond(tab-400) {
+                width: 100%;
+            }
+        
         }
 
         &--description {

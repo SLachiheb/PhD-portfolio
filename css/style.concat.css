@@ -542,7 +542,7 @@ body {
   transition: all .2s; }
   @media only screen and (max-width: 25em) {
     .heading-secondary {
-      font-size: 3rem; } }
+      font-size: 2rem; } }
   .heading-secondary:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }

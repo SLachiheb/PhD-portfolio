@@ -1080,7 +1080,7 @@ footer {
         height: 6rem; } }
     @media only screen and (max-width: 25em) {
       .navigation__logo {
-        margin: .4rem 0 1.5rem 2rem;
+        margin: 1.3rem 0 1.5rem 2rem;
         height: 5rem; } }
   .navigation__checkbox {
     display: none; }
@@ -1103,7 +1103,7 @@ footer {
     .navigation__button {
       height: 4rem;
       width: 4rem;
-      top: 1rem;
+      top: 2rem;
       right: 3rem; } }
   @media only screen and (max-width: 43.75em) {
     .navigation__background {
@@ -1120,7 +1120,7 @@ footer {
     .navigation__background {
       height: 4rem;
       width: 4rem;
-      top: 1rem;
+      top: 2rem;
       right: 3rem; } }
   @media only screen and (max-width: 43.75em) {
     .navigation__nav {
@@ -1153,7 +1153,11 @@ footer {
       color: #fff;
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
       background-size: 230%;
-      transition: all .5s; }
+      transition: all .5s; } }
+  @media only screen and (max-width: 43.75em) and (max-width: 25em) {
+    .navigation__link:link, .navigation__link:visited {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 43.75em) {
       .navigation__link:link span, .navigation__link:visited span {
         margin-right: 1.5rem;
         display: inline-block; }
@@ -1235,7 +1239,7 @@ footer {
         background-color: rgba(0, 0, 0, 0.2); } }
     @media only screen and (max-width: 25em) {
       .sticky .navigation {
-        height: 6rem; } }
+        height: 7rem; } }
 
 .section-about {
   background-color: #f7f7f7;

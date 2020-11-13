@@ -57,7 +57,7 @@
             height: 6rem;
         }
         @include respond(tab-400) {
-            margin: .4rem 0 1.5rem 2rem;
+            margin: 1.3rem 0 1.5rem 2rem;
             height: 5rem;
         }
     }
@@ -88,7 +88,7 @@
             @include respond(tab-400) {
                 height: 4rem;
                 width: 4rem;
-                top: 1rem;
+                top: 2rem;
                 right: 3rem;
             }
         }
@@ -107,7 +107,7 @@
             @include respond(tab-400) {
                 height: 4rem;
                 width: 4rem;
-                top: 1rem;
+                top: 2rem;
                 right: 3rem;
             }
 
@@ -154,6 +154,10 @@
                 background-image: linear-gradient(120deg, transparent 0%,transparent 50%, $color-white 50%);
                 background-size: 230%;
                 transition: all .5s;
+
+                @include respond(tab-400) {
+                    font-size: 2rem;
+                }
 
                 span {
                     margin-right: 1.5rem;
@@ -287,7 +291,7 @@
         }
 
         @include respond(tab-400) {
-            height: 6rem;
+            height: 7rem;
         }
     }
 }

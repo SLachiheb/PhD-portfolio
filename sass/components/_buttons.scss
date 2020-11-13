@@ -14,6 +14,10 @@
             font-weight: 700;
             color: #fbc531;
         }
+
+        @include respond(tab-400) {
+            padding: 1rem 2.5rem;
+        }
     }
 
     &:hover,

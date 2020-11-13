@@ -509,6 +509,9 @@ body {
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         font-size: 3rem; } }
+    @media only screen and (max-width: 25em) {
+      .heading-primary--main {
+        font-size: 2rem; } }
   .heading-primary--sub {
     display: block;
     font-weight: 400;
@@ -522,6 +525,9 @@ body {
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         font-size: 2rem; } }
+    @media only screen and (max-width: 25em) {
+      .heading-primary--sub {
+        font-size: 1rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -534,6 +540,9 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   transition: all .2s; }
+  @media only screen and (max-width: 25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
   .heading-secondary:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -1004,6 +1013,9 @@ footer {
     font-size: 1.5rem;
     color: #777777;
     text-align: center; }
+    @media only screen and (max-width: 25em) {
+      footer p {
+        font-size: 1.2rem; } }
 
 .header {
   height: 100vh;
@@ -1060,6 +1072,10 @@ footer {
       .navigation__logo {
         margin: 2rem 5rem;
         height: 6rem; } }
+    @media only screen and (max-width: 25em) {
+      .navigation__logo {
+        margin: .4rem 0 1.5rem 2rem;
+        height: 5rem; } }
   .navigation__checkbox {
     display: none; }
   @media only screen and (max-width: 43.75em) {
@@ -1076,7 +1092,14 @@ footer {
       z-index: 2000;
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer; } }
+  @media only screen and (max-width: 43.75em) and (max-width: 25em) {
+    .navigation__button {
+      height: 4rem;
+      width: 4rem;
+      top: 1rem;
+      right: 3rem; } }
+  @media only screen and (max-width: 43.75em) {
     .navigation__background {
       height: 5rem;
       width: 5rem;
@@ -1086,7 +1109,14 @@ footer {
       right: 5.5rem;
       background-image: radial-gradient(#ffdd59, #ffaf40);
       z-index: 1000;
-      transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
+      transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); } }
+  @media only screen and (max-width: 43.75em) and (max-width: 25em) {
+    .navigation__background {
+      height: 4rem;
+      width: 4rem;
+      top: 1rem;
+      right: 3rem; } }
+  @media only screen and (max-width: 43.75em) {
     .navigation__nav {
       height: 100vh;
       position: fixed;
@@ -1147,7 +1177,27 @@ footer {
       .navigation__icon::before {
         top: -.8rem; }
       .navigation__icon::after {
-        top: .8rem; }
+        top: .8rem; } }
+
+@media only screen and (max-width: 43.75em) and (max-width: 25em) {
+  .navigation__icon {
+    position: relative;
+    margin-top: 2rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      height: 1.5px;
+      width: 2.5rem;
+      display: inline-block;
+      background-color: #333; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navigation__icon::before {
+      top: -.7rem; }
+    .navigation__icon::after {
+      top: .7rem; } }
+  @media only screen and (max-width: 43.75em) {
     .navigation__button:hover .navigation__icon::before {
       top: -1.2rem; }
     .navigation__button:hover .navigation__icon::after {
@@ -1177,6 +1227,9 @@ footer {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         background-color: rgba(0, 0, 0, 0.2); } }
+    @media only screen and (max-width: 25em) {
+      .sticky .navigation {
+        height: 6rem; } }
 
 .section-about {
   background-color: #f7f7f7;

@@ -56,6 +56,10 @@
             margin: 2rem 5rem;
             height: 6rem;
         }
+        @include respond(tab-400) {
+            margin: .4rem 0 1.5rem 2rem;
+            height: 5rem;
+        }
     }
 
     // Mobile version ------------------------------------------------------------------------->
@@ -81,13 +85,10 @@
             text-align: center;
             cursor: pointer;
 
-            @include respond(tab-port) {
-                top: 4rem;
-                right: 4rem;
-            }
-
-            @include respond(phone) {
-                top: 3rem;
+            @include respond(tab-400) {
+                height: 4rem;
+                width: 4rem;
+                top: 1rem;
                 right: 3rem;
             }
         }
@@ -102,6 +103,13 @@
             background-image: radial-gradient($color-linear-light, $color-linear-dark);
             z-index: 1000;
             transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+
+            @include respond(tab-400) {
+                height: 4rem;
+                width: 4rem;
+                top: 1rem;
+                right: 3rem;
+            }
 
         }
 
@@ -203,6 +211,38 @@
             }
         }
 
+        @include respond(tab-400) {
+            &__icon {
+                position: relative;
+                margin-top: 2rem;
+    
+                &,
+                &::before,
+                &::after {
+                    height: 1.5px;
+                    width: 2.5rem;
+                    display: inline-block;
+                    background-color: $color-grey-dark-3 ;
+                }
+    
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    transition: all .2s;
+                }
+    
+                &::before {
+                    top: -.7rem;
+                }
+    
+                &::after {
+                    top: .7rem;
+                }
+            }
+        }
+
         &__button:hover &__icon::before {
             top: -1.2rem;
         }
@@ -244,6 +284,10 @@
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             background-color: rgba($color-black , .2) ;
+        }
+
+        @include respond(tab-400) {
+            height: 6rem;
         }
     }
 }

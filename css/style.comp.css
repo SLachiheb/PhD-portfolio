@@ -715,27 +715,23 @@ footer {
       top: 0;
       transform: rotate(-135deg); } }
 
-/*
 .sticky {
-    position: relative;
-    z-index: 7000;
+  position: relative;
+  z-index: 7000; }
+  .sticky .navigation {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff; }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .sticky .navigation {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.2); } }
 
-    .navigation  {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;  
-        height: 10rem;
-        background-color: rgba($color-black , .8) ;
-        color: $color-white;
-
-        @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            background-color: rgba($color-black , .2) ;
-        }
-    }
-}*/
 .section-about {
   background-color: #f7f7f7;
   padding: 15rem 0; }

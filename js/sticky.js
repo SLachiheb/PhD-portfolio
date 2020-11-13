@@ -1,6 +1,6 @@
 
 $(function(){
-    /* For the sticky navigation  *//*
+    /* For the sticky navigation  */
     $('.js--section-about').waypoint(
       function(direction) {
           if(direction == 'down') {
@@ -11,7 +11,7 @@ $(function(){
       }, {
           offset: '7rem'
       }
-    );*/
+    );
 
     
     $('.js--wp-1').waypoint(function(direction) {
